@@ -2,18 +2,7 @@
 [Base16](http://chriskempson.com/projects/base16/) theme switcher for [fish](https://fishshell.com) shell
 
 ## Installation
-1. If you have [fisher](https://github.com/jorgebucaran/fisher),
-```
-$ fisher install tomyun/base16-fish
-```
-
-2. Run your choice of `base16-*` function
-```
-$ base16-oceanicnext
-```
-
-## Screenshot
-![Screenshot](https://media.giphy.com/media/VboA2lb7ZJs4OgHjcH/giphy.gif)
+Source one of the scripts in the `colors` directory, either manually with `source` or by copying it into `~/.config/fish/conf.d/`.
 
 ## FAQ
 1. Why not just use [base16-shell](https://github.com/chriskempson/base16-shell)?
