@@ -1,29 +1,29 @@
 # base16-fish (https://github.com/tomyun/base16-fish)
 # based on base16-shell (https://github.com/chriskempson/base16-shell)
-# {{scheme-name}} scheme by {{scheme-author}}
+# Pasque scheme by Gabriel Fontes (https://github.com/Misterio77)
 
-set color00 {{base00-hex-r}}/{{base00-hex-g}}/{{base00-hex-b}} # Base 00 - Black
-set color01 {{base08-hex-r}}/{{base08-hex-g}}/{{base08-hex-b}} # Base 08 - Red
-set color02 {{base0B-hex-r}}/{{base0B-hex-g}}/{{base0B-hex-b}} # Base 0B - Green
-set color03 {{base0A-hex-r}}/{{base0A-hex-g}}/{{base0A-hex-b}} # Base 0A - Yellow
-set color04 {{base0D-hex-r}}/{{base0D-hex-g}}/{{base0D-hex-b}} # Base 0D - Blue
-set color05 {{base0E-hex-r}}/{{base0E-hex-g}}/{{base0E-hex-b}} # Base 0E - Magenta
-set color06 {{base0C-hex-r}}/{{base0C-hex-g}}/{{base0C-hex-b}} # Base 0C - Cyan
-set color07 {{base05-hex-r}}/{{base05-hex-g}}/{{base05-hex-b}} # Base 05 - White
-set color08 {{base03-hex-r}}/{{base03-hex-g}}/{{base03-hex-b}} # Base 03 - Bright Black
+set color00 27/1c/3a # Base 00 - Black
+set color01 a9/22/58 # Base 08 - Red
+set color02 c6/91/4b # Base 0B - Green
+set color03 80/4e/ad # Base 0A - Yellow
+set color04 8e/7d/c6 # Base 0D - Blue
+set color05 95/3b/9d # Base 0E - Magenta
+set color06 72/63/aa # Base 0C - Cyan
+set color07 de/dc/df # Base 05 - White
+set color08 5d/57/66 # Base 03 - Bright Black
 set color09 $color01 # Base 08 - Bright Red
 set color10 $color02 # Base 0B - Bright Green
 set color11 $color03 # Base 0A - Bright Yellow
 set color12 $color04 # Base 0D - Bright Blue
 set color13 $color05 # Base 0E - Bright Magenta
 set color14 $color06 # Base 0C - Bright Cyan
-set color15 {{base07-hex-r}}/{{base07-hex-g}}/{{base07-hex-b}} # Base 07 - Bright White
-set color16 {{base09-hex-r}}/{{base09-hex-g}}/{{base09-hex-b}} # Base 09
-set color17 {{base0F-hex-r}}/{{base0F-hex-g}}/{{base0F-hex-b}} # Base 0F
-set color18 {{base01-hex-r}}/{{base01-hex-g}}/{{base01-hex-b}} # Base 01
-set color19 {{base02-hex-r}}/{{base02-hex-g}}/{{base02-hex-b}} # Base 02
-set color20 {{base04-hex-r}}/{{base04-hex-g}}/{{base04-hex-b}} # Base 04
-set color21 {{base06-hex-r}}/{{base06-hex-g}}/{{base06-hex-b}} # Base 06
+set color15 bb/aa/dd # Base 07 - Bright White
+set color16 91/88/89 # Base 09
+set color17 59/32/5c # Base 0F
+set color18 10/03/23 # Base 01
+set color19 3e/2d/5c # Base 02
+set color20 be/bc/bf # Base 04
+set color21 ed/ea/ef # Base 06
 set colorfg $color07 # Base 05 - White
 set colorbg $color00 # Base 00 - Black
 
@@ -77,13 +77,13 @@ put_template 21 $color21
 # foreground / background / cursor color
 if test -n "$ITERM_SESSION_ID"
 	# iTerm2 proprietary escape codes
-	put_template_custom Pg {{base05-hex}} # foreground
-	put_template_custom Ph {{base00-hex}} # background
-	put_template_custom Pi {{base05-hex}} # bold color
-	put_template_custom Pj {{base02-hex}} # selection color
-	put_template_custom Pk {{base05-hex}} # selected text color
-	put_template_custom Pl {{base05-hex}} # cursor
-	put_template_custom Pm {{base00-hex}} # cursor text
+	put_template_custom Pg dedcdf # foreground
+	put_template_custom Ph 271c3a # background
+	put_template_custom Pi dedcdf # bold color
+	put_template_custom Pj 3e2d5c # selection color
+	put_template_custom Pk dedcdf # selected text color
+	put_template_custom Pl dedcdf # cursor
+	put_template_custom Pm 271c3a # cursor text
 else
 	put_template_var 10 $colorfg
 	if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -96,10 +96,10 @@ else
 end
 
 # set syntax highlighting colors
-set -U fish_color_autosuggestion {{base02-hex}}
+set -U fish_color_autosuggestion 3e2d5c
 set -U fish_color_cancel -r
 set -U fish_color_command green #white
-set -U fish_color_comment {{base02-hex}}
+set -U fish_color_comment 3e2d5c
 set -U fish_color_cwd green
 set -U fish_color_cwd_root red
 set -U fish_color_end brblack #blue
@@ -110,11 +110,11 @@ set -U fish_color_host normal
 set -U fish_color_match --background=brblue
 set -U fish_color_normal normal
 set -U fish_color_operator blue #green
-set -U fish_color_param {{base04-hex}}
+set -U fish_color_param bebcbf
 set -U fish_color_quote yellow #brblack
 set -U fish_color_redirection cyan
-set -U fish_color_search_match bryellow --background={{base02-hex}}
-set -U fish_color_selection white --bold --background={{base02-hex}}
+set -U fish_color_search_match bryellow --background=3e2d5c
+set -U fish_color_selection white --bold --background=3e2d5c
 set -U fish_color_status red
 set -U fish_color_user brgreen
 set -U fish_color_valid_path --underline
