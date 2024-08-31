@@ -1,5 +1,5 @@
 # base16-fish
-[Base16](http://chriskempson.com/projects/base16/) theme switcher for [fish](https://fishshell.com) shell
+[Base16](http://chriskempson.com/projects/base16/) theme switcher for [fish](https://fishshell.com) shell. Note that this fork is entirely incompatible with upstream and sets colors in a completely different way.
 
 ## Installation
 Source one of the scripts in the `colors` directory, either manually with `source` or by copying it into `~/.config/fish/conf.d/`.
